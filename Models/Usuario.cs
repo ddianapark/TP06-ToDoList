@@ -2,13 +2,13 @@ namespace TP06_ToDoList.Models;
 
 public class Usuario
 {
-    int IdUsuarios { get; set; }
-    string Nombre { get; set; }
-    string apellido { get; set; }
-    string username { get; set; }
-    string password { get; set; }
-    DateTime FechaUltimoLog { get; set; }
-    string foto { get; set; }
+    public int IdUsuarios { get; set; }
+    public string Nombre { get; set; }
+    public string apellido { get; set; }
+    public string username { get; set; }
+    public string password { get; set; }
+    public DateTime FechaUltimoLog { get; set; }
+    public string foto { get; set; }
 
     public Usuario (){}
     public Usuario (string Nombre, string apellido, string username, string password, DateTime fechaUltimoLogin, string foto)

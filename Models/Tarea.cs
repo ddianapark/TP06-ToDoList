@@ -2,12 +2,12 @@ namespace TP06_ToDoList.Models;
 
 public class Tarea
 {
-    int IdTareas { get; set; }
-    string titulo { get; set; }
-    string descripcion { get; set; }
-    DateTime fecha { get; set; }
-    bool finalizada { get; set; }
-    int IdUsuario { get; set; }
+    public int IdTareas { get; set; }
+    public string titulo { get; set; }
+    public string descripcion { get; set; }
+    public DateTime fecha { get; set; }
+    public bool finalizada { get; set; }
+    public int IdUsuario { get; set; }
     public Tarea(){}
     public Tarea (string titulo, string descripcion, DateTime fecha, bool finalizada, int IdUsuario)
     {
