@@ -1,0 +1,29 @@
+@{
+    ViewData["Title"] = "modificar Tarea";
+}
+
+<body>
+    <header>
+        <h1>modificar tarea</h1>
+    </header>
+    
+    <main>
+
+       <form action='@Url.Action("RegistroGuardar", "Home")' method = post>
+                    <input type="text" name = "titulo" autocomplete="off">
+                    <input type="text" name = "descripcion" autocomplete="off">
+                    <input type="date" name = "fecha" autocomplete="off">
+                    
+                    <input type="radio" name = "finalizada" value = "1"> finalizada
+                    <input type="radio" name = "finalizada" value = "0"> no finalizada
+                    
+                    <input type="date" name = "FechaUltimoLog" autocomplete="off">
+                    <input type="file" name = "foto">
+                <div>
+                    <input type="submit" value="ENVIAR">
+                </div>
+            </form>
+
+    </main>
+    
+</body>

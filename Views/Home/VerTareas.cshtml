@@ -1,0 +1,29 @@
+@{
+    ViewData["Title"] = "Ver Tareas";
+}
+
+<body>
+    <header>
+        <h1>VerTareas</h1>
+    </header>
+    
+    <main>
+      <h1>Ver tareas activas</h1>
+        @for (int i = 0; i < ViewBag.Tareas.Count; i++)
+        {
+            <p>titulo: @ViewBag.Tareas[i].titulo </p>
+
+                 <p>descripcion: @ViewBag.Tareas[i].descripcion </p>
+                 <p>Fecha: @ViewBag.Tareas[i].fecha </p>
+                @if (@ViewBag.Tareas[i].finalizada = true)
+                {
+                   <p>esta finalizada</p> 
+                } else{<p>no esta finalizda</p> }
+
+                
+                    <p>Id del usuario: @ViewBag.Tareas[i].IdUsuario </p>
+           
+        }
+    </main>
+    
+</body>
