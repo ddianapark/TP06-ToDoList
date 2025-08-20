@@ -13,19 +13,20 @@
         {
             <p>titulo: @ViewBag.Tareas[i].titulo </p>
 
-                 <p>descripcion: @ViewBag.Tareas[i].descripcion </p>
-                 <p>Fecha: @ViewBag.Tareas[i].fecha </p>
-                @if (@ViewBag.Tareas[i].finalizada = true)
-                {
-                   <p>esta finalizada</p> 
-                } else{<p>no esta finalizda</p> }
-
-                
-                    <p>Id del usuario: @ViewBag.Tareas[i].IdUsuario </p>
-           
+            <p>descripcion: @ViewBag.Tareas[i].descripcion </p>
+            <p>Fecha: @ViewBag.Tareas[i].fecha </p>
+            @if (@ViewBag.Tareas[i].finalizada = true)
+            {
+              <p>esta finalizada</p> 
+            }
+            else
+            {
+                <p>no esta finalizda</p>
+            }
+            <a href='@Url.Action("EditarTarea", "Home", new {IdUsuario = ViewBag.Tarea, IdTarea = ViewBag.Tareas[i].IdTareas})'>MODIFICAR TAREA</a>
         }
 
-        <a href='@Url.Action("CrearTarea", "Home")'>CREAR TAREA</a>
+        <a href='@Url.Action("CrearTarea", "Home", new {IdUsuario = ViewBag.IdUsuario})'>CREAR TAREA</a>
     </main>
     
 </body>

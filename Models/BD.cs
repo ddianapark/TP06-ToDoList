@@ -97,15 +97,15 @@ public static class BD
             return true;
         }
     }
-    public static void ModificarTarea(Tarea tarea)
+    public static void ModificarTarea(int IdTareas, string titulo, string descripcion, DateTime fecha, bool finalizada, int IdUsuario)
     {
         
         using(SqlConnection connection = new SqlConnection(_connectionString))
         {
-           string query = @"UPDATE Tarea SET titulo = @ptitulo, descripcion = @pdescripcion, fecha = @pfecha, finalizada = @pfinalizada, IdUsuario = @pIdUsuario WHERE IdTareas = @pIdTareas";
+           string query = @"UPDATE Tareas SET titulo = @ptitulo, descripcion = @pdescripcion, fecha = @pfecha, finalizada = @pfinalizada, IdUsuario = @pIdUsuario WHERE IdTareas = @pIdTareas";
 
 
-            connection.Execute(query, new { ptitulo = tarea.titulo, pdescripcion = tarea.descripcion, pfecha = tarea.fecha, pfinalizada = tarea.finalizada, pIdUsuario = tarea.IdUsuario, pIdTareas = tarea.IdTareas});
+            connection.Execute(query, new { ptitulo = titulo, pdescripcion = descripcion, pfecha = fecha, pfinalizada = finalizada, pIdUsuario = IdUsuario, pIdTareas = IdTareas});
         }
 
     }
@@ -119,15 +119,14 @@ public static class BD
         }
 
     }
-    public static void CrearTarea(Tarea tarea)
+    public static void CrearTarea(string titulo, string descripcion, DateTime fecha, bool finalizada, int IdUsuario)
     {
         
             string query = "INSERT INTO Tareas (titulo, descripcion, fecha, finalizada, IdUsuario) VALUES (@ptitulo, @pdescripcion, @pfecha, @pfinalizada, @pIdUsuario)";
 
             using(SqlConnection connection = new SqlConnection(_connectionString))
             {
-                connection.Execute(query, new { ptitulo = tarea.titulo, pdescripcion = tarea.descripcion, pfecha = tarea.fecha, pfinalizada = tarea.finalizada, pIdUsuario = tarea.IdUsuario});
-                
+                connection.Execute(query, new { ptitulo = titulo, pdescripcion = descripcion, pfecha = fecha, pfinalizada = finalizada, pIdUsuario = IdUsuario});             
             }
     } 
 

@@ -79,3 +79,4 @@ Z:\2025 4IC\PROGRAMACION\BDxPROG\TP06-ToDoList\obj\Debug\net8.0\refint\TP06-ToDo
 Z:\2025 4IC\PROGRAMACION\BDxPROG\TP06-ToDoList\obj\Debug\net8.0\TP06-ToDoList.pdb
 Z:\2025 4IC\PROGRAMACION\BDxPROG\TP06-ToDoList\obj\Debug\net8.0\TP06-ToDoList.genruntimeconfig.cache
 Z:\2025 4IC\PROGRAMACION\BDxPROG\TP06-ToDoList\obj\Debug\net8.0\ref\TP06-ToDoList.dll
+Z:\2025 4IC\PROGRAMACION\BDxPROG\TP06-ToDoList\bin\Debug\net8.0\System.Text.Json.dll

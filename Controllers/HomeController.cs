@@ -21,41 +21,45 @@ public class HomeController : Controller
     public IActionResult VerTareas(int IdUsuario)
     {
         ViewBag.Tareas = BD.DevolverTareas(IdUsuario);
+        ViewBag.IdUsuario = IdUsuario;
 
         return View("VerTareas");
     }
 
-    public IActionResult CrearTarea()
-    {        
+    public IActionResult CrearTarea(int IdUsuario)
+    {     
+        ViewBag.IdUsuario = IdUsuario;
         return View("CrearTarea");
     }
 
-    public IActionResult CrearTareaGuardar(Tarea tarea)
+    public IActionResult CrearTareaGuardar(string titulo, string descripcion, DateTime fecha, bool finalizada, int IdUsuario)
     {        
-        BD.CrearTarea(tarea);
-        return View("VerTareas");
+        BD.CrearTarea(titulo,  descripcion,  fecha,  finalizada, IdUsuario);
+        return RedirectToAction("VerTareas", "Home");
     }
 
-    public IActionResult EditarTarea()
+    public IActionResult EditarTarea(int IdUsuario, int IdTarea)
     {        
+        ViewBag.IdUsuario = IdUsuario;
+        ViewBag.IdTarea = IdTarea;
         return View("ModificarTarea");
     }
 
-    public IActionResult EditarTareaGuardar(Tarea tarea)
+    public IActionResult EditarTareaGuardar(int IdTareas , string titulo, string descripcion, DateTime fecha, bool finalizada, int IdUsuario)
     {        
-        BD.ModificarTarea(tarea);
-        return View("VerTareas");
+        BD.ModificarTarea(IdTareas, titulo, descripcion, fecha, finalizada, IdUsuario);
+        return RedirectToAction("VerTareas", "Home");
     }
 
     public IActionResult FinalizarTarea(int IdTarea)
     {        
         BD.FinalizarTarea(IdTarea);
-        return View("VerTareas");
+        return RedirectToAction("VerTareas", "Home");
     }
     public IActionResult EliminarTarea(int IdTarea){
 
         BD.EliminarTarea(IdTarea);
 
-        return View("VerTareas");
+        return RedirectToAction("VerTareas", "Home");
     }
 }
