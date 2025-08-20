@@ -28,7 +28,7 @@ public static class BD
         Usuario miUsuario;
         using(SqlConnection connection = new SqlConnection(_connectionString))
         {
-            string query = "SELECT * FROM Usuario WHERE username = @pusername";
+            string query = "SELECT * FROM Usuarios WHERE username = @pusername";
             miUsuario = connection.QueryFirstOrDefault<Usuario>(query, new { pusername = username});
         }
         if(miUsuario == null)
@@ -44,7 +44,7 @@ public static class BD
         Usuario miUsuario = null;
         using(SqlConnection connection = new SqlConnection(_connectionString))
         {
-            string query = "SELECT * FROM Usuario WHERE username = @pusername AND password = @ppassword";
+            string query = "SELECT * FROM Usuarios WHERE username = @pusername AND password = @ppassword";
             if(query == null){
 
             } else{
@@ -63,7 +63,7 @@ public static class BD
         {
             string query = "SELECT * FROM Tareas WHERE IdUsuario = @pIdusuario";
             
-                Lista = connection.Query<Tarea>(query). ToList();
+                Lista = connection.Query<Tarea>(query, new {pIdusuario = IdUsuario}). ToList();
            
            return Lista;
         }
@@ -102,9 +102,10 @@ public static class BD
         
         using(SqlConnection connection = new SqlConnection(_connectionString))
         {
-            string query = "UPDATE Tareas SET titulo, descripcion, fecha, finalizada, IdUsuario WHERE IdTareas = @pIdTareas";
+           string query = @"UPDATE Tarea SET titulo = @ptitulo, descripcion = @pdescripcion, fecha = @pfecha, finalizada = @pfinalizada, IdUsuario = @pIdUsuario WHERE IdTareas = @pIdTareas";
 
-            connection.Execute(query, new { pIdTareas = tarea.IdTareas});
+
+            connection.Execute(query, new { ptitulo = tarea.titulo, pdescripcion = tarea.descripcion, pfecha = tarea.fecha, pfinalizada = tarea.finalizada, pIdUsuario = tarea.IdUsuario, pIdTareas = tarea.IdTareas});
         }
 
     }
@@ -112,7 +113,7 @@ public static class BD
     {
          using(SqlConnection connection = new SqlConnection(_connectionString))
         {
-            string query = "DELETE Tareas WHERE IdTareas = @pIdTareas";
+            string query = "DELETE FROM Tareas WHERE IdTareas = @pIdTareas";
 
             connection.Execute(query, new { pIdTareas = IdTareas});
         }
@@ -121,7 +122,7 @@ public static class BD
     public static void CrearTarea(Tarea tarea)
     {
         
-            string query = "INSERT INTO Tarea (titulo, descripcion, fecha, finalizada, IdUsuario) VALUES (@ptitulo, @pdescripcion, @pfecha, @pfinalizada, @pIdUsuario)";
+            string query = "INSERT INTO Tareas (titulo, descripcion, fecha, finalizada, IdUsuario) VALUES (@ptitulo, @pdescripcion, @pfecha, @pfinalizada, @pIdUsuario)";
 
             using(SqlConnection connection = new SqlConnection(_connectionString))
             {
@@ -136,7 +137,7 @@ public static class BD
 
          using(SqlConnection connection = new SqlConnection(_connectionString))
         {
-            string query = "UPDATE Tareas SET finalizada WHERE IdTareas = @pIdTareas";
+            string query = "UPDATE Tareas SET finalizada = 1 WHERE IdTareas = @pIdTareas";
 
             connection.Execute(query, new { pIdTareas = IdTareas});
         }
@@ -146,7 +147,7 @@ public static class BD
     {
              using(SqlConnection connection = new SqlConnection(_connectionString))
         {
-            string query = "UPDATE Tareas SET username, password WHERE IdUsuarios = @pUsusarios";
+            string query = "UPDATE Usuarios SET username, password WHERE IdUsuarios = @pUsusarios";
 
             connection.Execute(query, new { pUsuarios = IdUsuarios});
         }

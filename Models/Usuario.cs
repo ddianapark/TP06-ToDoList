@@ -2,7 +2,7 @@ namespace TP06_ToDoList.Models;
 
 public class Usuario
 {
-    public int IdUsuarios { get; set; }
+    public int IdUsuario { get; set; }
     public string Nombre { get; set; }
     public string apellido { get; set; }
     public string username { get; set; }

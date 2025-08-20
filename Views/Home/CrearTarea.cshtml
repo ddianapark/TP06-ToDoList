@@ -9,16 +9,15 @@
     
     <main>
 
-       <form action='@Url.Action("RegistroGuardar", "Home")' method = post>
-                    <input type="text" name = "titulo" autocomplete="off">
-                    <input type="text" name = "descripcion" autocomplete="off">
-                    <input type="date" name = "fecha" autocomplete="off">
+       <form action='@Url.Action("CrearTareaGuardar", "Home")' method = post>
+                    <input type="text" name = "titulo" autocomplete="off" placeholder="Tarea"><br>
+                    <input type="text" name = "descripcion" autocomplete="off" placeholder="Descripción"><br>
+                    <input type="date" name = "fecha" autocomplete="off"><br>
 
                     <input type="radio" name = "finalizada" value = "1"> finalizada
-                    <input type="radio" name = "finalizada" value = "0"> no finalizada
+                    <input type="radio" name = "finalizada" value = "0"> no finalizada <br>   
                     
-                    <input type="date" name = "FechaUltimoLog" autocomplete="off">
-                    <input type="file" name = "foto">
+                    <input type="file" name = "foto"><br>
                 <div>
                     <input type="submit" value="ENVIAR">
                 </div>

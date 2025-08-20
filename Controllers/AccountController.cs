@@ -20,8 +20,8 @@ public class AccountController : Controller
 
     public IActionResult LogInGuardar(string username, string password)
     {        
-        BD.Login(username, password);
-        return View("VerTareas");
+        Usuario usu = BD.Login(username, password);
+        return RedirectToAction("VerTareas", "Home", new { IdUsuario = usu.IdUsuario });
     }
 
      public IActionResult Registrarse()
@@ -32,7 +32,7 @@ public class AccountController : Controller
     public IActionResult RegistroGuardar(string nombre, string apellido, string username, string password, DateTime fechaUltimoLog, string foto)
     {        
         BD.Registrarse(nombre, apellido, username, password, fechaUltimoLog, foto);
-        return View("Index");
+        return RedirectToAction("Index", "Home");
     }
     
 }

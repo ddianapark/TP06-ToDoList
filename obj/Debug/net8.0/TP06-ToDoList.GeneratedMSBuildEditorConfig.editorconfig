@@ -9,51 +9,51 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TP06-ToDoList
 build_property.RootNamespace = TP06-ToDoList
-build_property.ProjectDir = z:\2025 4IC\PROGRAMACION\BDxPROG\TP06-ToDoList\
+build_property.ProjectDir = Z:\2025 4IC\PROGRAMACION\BDxPROG\TP06-ToDoList\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = z:\2025 4IC\PROGRAMACION\BDxPROG\TP06-ToDoList
+build_property.MSBuildProjectDirectory = Z:\2025 4IC\PROGRAMACION\BDxPROG\TP06-ToDoList
 build_property._RazorSourceGeneratorDebug = 
 
-[z:/2025 4IC/PROGRAMACION/BDxPROG/TP06-ToDoList/Views/Account/LogIn.cshtml]
+[Z:/2025 4IC/PROGRAMACION/BDxPROG/TP06-ToDoList/Views/Account/LogIn.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dJbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[z:/2025 4IC/PROGRAMACION/BDxPROG/TP06-ToDoList/Views/Account/Registro.cshtml]
+[Z:/2025 4IC/PROGRAMACION/BDxPROG/TP06-ToDoList/Views/Account/Registro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Ryby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[z:/2025 4IC/PROGRAMACION/BDxPROG/TP06-ToDoList/Views/Home/CrearTarea.cshtml]
+[Z:/2025 4IC/PROGRAMACION/BDxPROG/TP06-ToDoList/Views/Home/CrearTarea.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhclRhcmVhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[z:/2025 4IC/PROGRAMACION/BDxPROG/TP06-ToDoList/Views/Home/Index.cshtml]
+[Z:/2025 4IC/PROGRAMACION/BDxPROG/TP06-ToDoList/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[z:/2025 4IC/PROGRAMACION/BDxPROG/TP06-ToDoList/Views/Home/ModificarTarea.cshtml]
+[Z:/2025 4IC/PROGRAMACION/BDxPROG/TP06-ToDoList/Views/Home/ModificarTarea.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNb2RpZmljYXJUYXJlYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[z:/2025 4IC/PROGRAMACION/BDxPROG/TP06-ToDoList/Views/Home/VerTareas.cshtml]
+[Z:/2025 4IC/PROGRAMACION/BDxPROG/TP06-ToDoList/Views/Home/VerTareas.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWZXJUYXJlYXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[z:/2025 4IC/PROGRAMACION/BDxPROG/TP06-ToDoList/Views/Shared/_Layout.cshtml]
+[Z:/2025 4IC/PROGRAMACION/BDxPROG/TP06-ToDoList/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[z:/2025 4IC/PROGRAMACION/BDxPROG/TP06-ToDoList/Views/Shared/_ValidationScriptsPartial.cshtml]
+[Z:/2025 4IC/PROGRAMACION/BDxPROG/TP06-ToDoList/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[z:/2025 4IC/PROGRAMACION/BDxPROG/TP06-ToDoList/Views/_ViewImports.cshtml]
+[Z:/2025 4IC/PROGRAMACION/BDxPROG/TP06-ToDoList/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[z:/2025 4IC/PROGRAMACION/BDxPROG/TP06-ToDoList/Views/_ViewStart.cshtml]
+[Z:/2025 4IC/PROGRAMACION/BDxPROG/TP06-ToDoList/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
