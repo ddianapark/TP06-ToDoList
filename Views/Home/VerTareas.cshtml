@@ -1,32 +1,38 @@
 @{
     ViewData["Title"] = "Ver Tareas";
 }
-
+<section class = "verTarea">
 <body>
     <header>
         <h1>VerTareas</h1>
     </header>
     
     <main>
-      <h1>Ver tareas activas</h1>
+    
         @for (int i = 0; i < ViewBag.Tareas.Count; i++)
         {
-            <p>titulo: @ViewBag.Tareas[i].titulo </p>
-
-            <p>descripcion: @ViewBag.Tareas[i].descripcion </p>
-            <p>Fecha: @ViewBag.Tareas[i].fecha </p>
-            @if (@ViewBag.Tareas[i].finalizada = true)
+            <h4>Título: @ViewBag.Tareas[i].titulo </h4>
+            <h4>Descripcion: @ViewBag.Tareas[i].descripcion </h4>
+            <h4>Fecha: @ViewBag.Tareas[i].fecha </h4>
+            @if (ViewBag.Tareas[i].finalizada == true)
             {
-              <p>esta finalizada</p> 
+              <h4>Esta finalizada</h4> 
             }
             else
             {
-                <p>no esta finalizda</p>
+                <h4>No esta finalizada</h4>
             }
-            <a href='@Url.Action("EditarTarea", "Home", new {IdUsuario = ViewBag.Tarea, IdTarea = ViewBag.Tareas[i].IdTareas})'>MODIFICAR TAREA</a>
-        }
 
+            <a href='@Url.Action("EditarTarea", "Home", new {IdUsuario = ViewBag.IdUsuario, IdTarea = ViewBag.Tareas[i].IdTareas})'>MODIFICAR TAREA</a><br>
+            <a href='@Url.Action("FinalizarTarea", "Home", new {IdTarea = ViewBag.Tareas[i].IdTareas})'>FINALIZAR TAREA</a><br>
+            <a href='@Url.Action("EliminarTarea", "Home", new {IdTarea = ViewBag.Tareas[i].IdTareas})'>ELIMINAR TAREA</a><br>       
+   
+
+        }
+        <div>
         <a href='@Url.Action("CrearTarea", "Home", new {IdUsuario = ViewBag.IdUsuario})'>CREAR TAREA</a>
+        </div>
     </main>
     
 </body>
+</section>

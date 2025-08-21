@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6+HNpT4GaU/mcUTFLeaOzMejtnRvCI9o1YSRS1hLmmo=",
+  "Hash": "K64eqRxzqcQuph8XdDBGSigPkS7X5weO0c5qNnNuK8Q=",
   "Source": "TP06-ToDoList",
   "BasePath": "_content/TP06-ToDoList",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "Z:\\2025 4IC\\PROGRAMACION\\BDxPROG\\TP06-ToDoList\\wwwroot\\fotos\\back.png",
+      "SourceId": "TP06-ToDoList",
+      "SourceType": "Discovered",
+      "ContentRoot": "Z:\\2025 4IC\\PROGRAMACION\\BDxPROG\\TP06-ToDoList\\wwwroot\\",
+      "BasePath": "_content/TP06-ToDoList",
+      "RelativePath": "fotos/back.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\fotos\\back.png"
     },
     {
       "Identity": "Z:\\2025 4IC\\PROGRAMACION\\BDxPROG\\TP06-ToDoList\\wwwroot\\js\\site.js",

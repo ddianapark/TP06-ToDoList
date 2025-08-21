@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "Z:\\2025 4IC\\PROGRAMACION\\BDxPROG\\TP06-ToDoList\\wwwroot\\fotos\\back.png",
+      "PackagePath": "staticwebassets\\fotos\\back.png"
+    },
+    {
       "Id": "Z:\\2025 4IC\\PROGRAMACION\\BDxPROG\\TP06-ToDoList\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

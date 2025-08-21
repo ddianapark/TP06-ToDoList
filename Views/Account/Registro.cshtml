@@ -2,6 +2,7 @@
     ViewData["Title"] = "Sign in";
 }
 
+<section class = "signin">
 <body>
     <header>
         <h1>SIGN IN</h1>
@@ -10,12 +11,12 @@
     <main>
 
        <form action='@Url.Action("RegistroGuardar", "Account")' method = post>
-                    <input type="text" name = "username" autocomplete="off" placeholder="Username"><br>
-                    <input type="password" name = "password" autocomplete="off" placeholder="Password"><br>
-                    <input type="text" name = "Nombre" autocomplete="off" placeholder="Nombre"><br>
-                    <input type="text" name = "apellido" autocomplete="off" placeholder="Apellido"><br>
-                    <input type="date" name = "FechaUltimoLog" autocomplete="off"><br>
-                    Foto: <input type="file" name = "foto" >
+                    <input type="text" name = "username" autocomplete="off" placeholder="Username">
+                    <input type="password" name = "password" autocomplete="off" placeholder="Password">
+                    <input type="text" name = "Nombre" autocomplete="off" placeholder="Nombre">
+                    <input type="text" name = "apellido" autocomplete="off" placeholder="Apellido">
+                    <input type="date" name = "FechaUltimoLog" autocomplete="off">
+                    <input type="file" name = "foto">
                 <div>
                     <input type="submit" value="ENVIAR">
                 </div>
@@ -24,3 +25,4 @@
     </main>
     
 </body>
+</section>

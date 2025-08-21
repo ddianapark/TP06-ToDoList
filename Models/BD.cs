@@ -102,10 +102,8 @@ public static class BD
         
         using(SqlConnection connection = new SqlConnection(_connectionString))
         {
-           string query = @"UPDATE Tareas SET titulo = @ptitulo, descripcion = @pdescripcion, fecha = @pfecha, finalizada = @pfinalizada, IdUsuario = @pIdUsuario WHERE IdTareas = @pIdTareas";
-
-
-            connection.Execute(query, new { ptitulo = titulo, pdescripcion = descripcion, pfecha = fecha, pfinalizada = finalizada, pIdUsuario = IdUsuario, pIdTareas = IdTareas});
+           string query = "UPDATE Tareas SET titulo = @ptitulo, descripcion = @pdescripcion, fecha = @pfecha, finalizada = @pfinalizada, IdUsuario = @pIdUsuario WHERE IdTareas = @pIdTareas";
+           connection.Execute(query, new { ptitulo = titulo, pdescripcion = descripcion, pfecha = fecha, pfinalizada = finalizada, pIdUsuario = IdUsuario, pIdTareas = IdTareas});
         }
 
     }
