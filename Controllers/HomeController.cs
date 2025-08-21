@@ -35,7 +35,7 @@ public class HomeController : Controller
     public IActionResult CrearTareaGuardar(string titulo, string descripcion, DateTime fecha, bool finalizada, int IdUsuario)
     {        
         BD.CrearTarea(titulo,  descripcion,  fecha,  finalizada, IdUsuario);
-        return RedirectToAction("VerTareas", "Home");
+        return RedirectToAction("VerTareas", "Home", new {IdUsuario = IdUsuario});
     }
 
     public IActionResult EditarTarea(int IdUsuario, int IdTarea)
@@ -48,18 +48,18 @@ public class HomeController : Controller
     public IActionResult EditarTareaGuardar(int IdTareas , string titulo, string descripcion, DateTime fecha, bool finalizada, int IdUsuario)
     {        
         BD.ModificarTarea(IdTareas, titulo, descripcion, fecha, finalizada, IdUsuario);
-        return RedirectToAction("VerTareas", "Home");
+        return RedirectToAction("VerTareas", "Home", new {IdUsuario = IdUsuario});
     }
 
-    public IActionResult FinalizarTarea(int IdTarea)
+    public IActionResult FinalizarTarea(int IdTarea, int IdUsuario)
     {        
         BD.FinalizarTarea(IdTarea);
-        return RedirectToAction("VerTareas", "Home");
+        return RedirectToAction("VerTareas", "Home", new {IdUsuario = IdUsuario});
     }
-    public IActionResult EliminarTarea(int IdTarea){
+    public IActionResult EliminarTarea(int IdTarea, int IdUsuario){
 
         BD.EliminarTarea(IdTarea);
 
-        return RedirectToAction("VerTareas", "Home");
+        return RedirectToAction("VerTareas", "Home", new {IdUsuario = IdUsuario});
     }
 }

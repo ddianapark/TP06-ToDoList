@@ -2,6 +2,8 @@
     ViewData["Title"] = "modificar Tarea";
 }
 
+<section class = "modTarea">
+
 <body>
     <header>
         <h1>Modificar tarea</h1>
@@ -10,17 +12,22 @@
     <main>
        <form action='@Url.Action("EditarTareaGuardar", "Home")' method = post>
             <input type="hidden" name="IdTareas" value ="@ViewBag.IdTarea">  
-            <input type="text" name = "titulo" autocomplete="off" placeholder="Tarea"><br>
-            <input type="text" name = "descripcion" autocomplete="off" placeholder="Descripción"><br>
-            <input type="date" name = "fecha" autocomplete="off"><br>
+            <input type="text" name = "titulo" autocomplete="off" placeholder="Tarea">
+            <input type="text" name = "descripcion" autocomplete="off" placeholder="Descripción">
+            <input type="date" name = "fecha" autocomplete="off">
 
-            <input type="radio" name = "finalizada" value = "1"> finalizada
-            <input type="radio" name = "finalizada" value = "0"> no finalizada <br>    
+            <div class = "fin">
+                <label><input type="radio" name = "finalizada" value = "1" >Finalizada</label>
+                <label><input type="radio" name = "finalizada" value = "0" > No finalizada</label>
+            </div>
+            
             <input type="hidden" name="IdUsuario" value ="@ViewBag.IdUsuario">  
-            <div>
+            
+            <div class = "en">
                 <input type="submit" value="ENVIAR">
             </div>
             </form>
     </main>
     
 </body>
+</section>
